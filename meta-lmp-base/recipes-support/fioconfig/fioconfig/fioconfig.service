@@ -6,7 +6,7 @@ ConditionPathExists=/var/sota/sota.toml
 [Service]
 EnvironmentFile=-/etc/default/fioconfig
 RestartSec=10
-Restart=always
+Restart=on-failure
 ExecStartPre=mkdir -p /var/run/secrets
 ExecStart=/usr/bin/fioconfig daemon
 
